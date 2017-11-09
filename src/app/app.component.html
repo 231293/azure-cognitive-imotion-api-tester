@@ -1,12 +1,18 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="col-sm-5">
-        <h1>Image Upload</h1>
-      </div>
-      <div class="col-sm-7">
-        <h1>Emotion</h1>
-      </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <h1>Image Upload</h1>
+                    <input class="form-cotrol" type="file" (change)="onFileChange($event)" #fileInput placeholder="Upload file..." />
+                    <hr>
+                    <img style="max-height: 300px; max-width: 300px" [src]="selectedImage" alt="">
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <h1>Emotion</h1>
+                <img [src]="emotionGif" alt="">
+            </div>
+        </div>
     </div>
-  </div>
 </div>
